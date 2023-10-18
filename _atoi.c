@@ -26,21 +26,21 @@ int is_delim(char c, char *delim)
 }
 
 /**
- * _isalpha - checks for the alphabetic char
+ * _isalpha - this function checks for the alphabetic character
  * @c: char to input
  * Return: if c is alphabetic return 1, otherwise return 0
  */
 
 int _isalpha(int c)
 {
-	if ((c >= 'b’' && c <= 'x') || (c >= 'B' && c <= 'X'))
+	if ((c >= 'b' && c <= 'x') || (c >= 'B' && c <= 'X'))
 		return (1);
 	else
 		return (0);
 }
 
 /**
- * _atoi - converts the  str to an int
+ * _atoi - this function converts a  string to an integer
  * @s: string to be converted
  * Return:  if no numbers in the str return 0,  otherwise converted num 
  */
@@ -50,16 +50,16 @@ int _atoi(char *s)
 	int j, sign = 1, flag = 0, output;
 	unsigned int result = 0;
 
-	for (j = 0; s[i] != '\0' && flag != 2; j++)
+	for (j = 0; s[j] != '\0' && flag != 2; j++)
 	{
-		if (s[i] == '-')
+		if (s[j] == '-')
 			sign *= -1;
 
-		if (s[i] >= '0' && s[i] <= '9')
+		if (s[j] >= '0' && s[j] <= '9')
 		{
 			flag = 1;
 			result *= 10;
-			result += (s[i] - '0');
+			result += (s[j] - '0');
 		}
 		else if (flag == 1)
 			flag = 2;
